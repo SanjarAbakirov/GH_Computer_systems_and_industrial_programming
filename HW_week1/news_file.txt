@@ -1,0 +1,7 @@
+This is news file
+Now we are starting transmission:
+
+Computer Systems and industrial programming: Attended the lecture
+The homework is not done at all. I intend to dedicate time in the following week.
+
+Academy office hours: I attended on Wednesday. Actively participated. Bakyt gave me some good advice on math. Implemented.
