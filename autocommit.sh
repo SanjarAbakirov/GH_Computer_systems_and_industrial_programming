@@ -1,4 +1,4 @@
-
+#!/bin/bash
 echo "Control all changes in $PATH..."
 
 while true; do
