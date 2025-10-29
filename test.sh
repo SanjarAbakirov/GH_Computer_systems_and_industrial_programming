@@ -1,1 +1,3 @@
-echo "Hello Almazbek
+echo "Hello Almazbek"
+
+echo "Make this world better!"
