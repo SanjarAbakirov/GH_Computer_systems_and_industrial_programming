@@ -12,4 +12,6 @@ echo "Success is mine!"
 
 echo "I can do it!"
 
-echo "I believe in myself!"echo "I am unstoppable!"
+echo "I believe in myself!"
+
+echo "I am unstoppable!"
