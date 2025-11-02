@@ -1,7 +1,4 @@
-
-
-echo "Make this world better!"
-
+#!/bin/bash
 echo "Goodbye!"
 
 echo "I can do it!"
