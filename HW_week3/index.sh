@@ -11,3 +11,5 @@ echo "${x}"
 
 echo "${x:0:5}"
 echo "${#x}"
+
+echo "$array[0]"
