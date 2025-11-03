@@ -15,3 +15,8 @@ function foo()
 foo arg1 arg2
 returnValue=$?
 
+bar ()
+{
+    echo "This is another function"
+    return 0
+}
