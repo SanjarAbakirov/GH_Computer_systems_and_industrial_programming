@@ -20,3 +20,4 @@ bar ()
     echo "This is another function"
     return 0
 }
+bar
