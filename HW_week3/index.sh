@@ -4,7 +4,7 @@ test
 
 x = "my name is Sam"
 
-echo '$x'
+echo '$x' // single quotes, just string
 echo "$x"
 
 echo "${x}"
