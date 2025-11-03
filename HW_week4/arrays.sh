@@ -22,4 +22,4 @@ bar ()
 }
 bar
 
-foo "My name is Sanjar"
+foo "My name is $Name"
