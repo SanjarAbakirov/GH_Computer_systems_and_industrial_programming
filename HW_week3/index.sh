@@ -1,5 +1,4 @@
 echo "Hello world!"
-
 x="my name is Sammy"
 y="his name is Tommy"
 
