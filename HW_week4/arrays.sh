@@ -12,6 +12,5 @@ function foo()
     returnValue=0
     return $returnValue
 }
-
 foo arg1 arg2
 returnValue=$?
