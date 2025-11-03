@@ -6,7 +6,7 @@ y="his name is Tommy"
 echo '$x'
 echo "$x"
 
-echo "${x}"
+echo "${y}"
 echo "${x:0:5}"
 echo "${#x}"
 
