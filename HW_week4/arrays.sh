@@ -23,4 +23,4 @@ bar ()
 bar
 foo "My name is $Name"
 
-echo "Thsi is debugger"
+echo "This is debugger"
