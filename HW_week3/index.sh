@@ -6,7 +6,7 @@ echo '$x'
 echo "$x"
 
 echo "${y}"
-echo "${x:0:5}"
+echo "${x:0:7}"
 echo "${#x}"
 
 echo "$array[0]"
