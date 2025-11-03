@@ -1,7 +1,5 @@
 echo "Hello world!"
 
-test
-
 x = "my name is Sam"
 
 echo '$x' // single quotes, just string
