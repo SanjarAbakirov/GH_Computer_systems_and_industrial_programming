@@ -21,5 +21,4 @@ bar ()
     return 0
 }
 bar
-
 foo "My name is $Name"
