@@ -6,7 +6,6 @@ echo '$x' // single quotes, just string
 echo "$x"
 
 echo "${x}"
-
 echo "${x:0:5}"
 echo "${#x}"
 
