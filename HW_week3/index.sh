@@ -1,6 +1,6 @@
 echo "Hello world!"
 
-x="my name is Sam"
+x="my name is Sammy"
 
 echo '$x'
 echo "$x"
