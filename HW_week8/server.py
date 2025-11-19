@@ -14,8 +14,15 @@ ADDR = (SERVER, PORT)
 # what type of ip adress we are looking for specific connetions
 # default option for streaming data
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
 server.bind(ADDR)
+
+
+def handle_client(conn, addr):
+    pass
+
+
+der start():
+    pass
 
 # server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # stok_steam means we are using TCP - transmission contro protocol
