@@ -5,8 +5,8 @@ PORT = 5050
 # SERVER = "192.168.31.127"
 SERVER = socket.gethostbyname(socket.gethostname())
 # means get the ip adress of this computer
-# print(SERVER)
-# print(socket.gethostname()) # name reoresent computer
+print(SERVER)
+print(socket.gethostname())  # name reoresent computer
 
 # so let's put address to this server
 ADDR = (SERVER, PORT)
