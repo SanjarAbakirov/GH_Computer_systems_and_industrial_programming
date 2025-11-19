@@ -21,7 +21,7 @@ def handle_client(conn, addr):
     pass
 
 
-der start():
+def start():
     pass
 
 # server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
