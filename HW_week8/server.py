@@ -9,7 +9,8 @@ SERVER = socket.gethostbyname(socket.gethostname())
 # print(socket.gethostname()) # name reoresent computer
 
 # what type of ip adress we are looking for specific connetions
-socket = socket.socket(socket.AF_INET)
+# default option for streaming data
+socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # stok_steam means we are using TCP - transmission contro protocol
