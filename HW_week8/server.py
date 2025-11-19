@@ -6,6 +6,7 @@ PORT = 5050
 SERVER = socket.gethostbyname(socket.gethostname())
 # means get the ip adress of this computer
 print(SERVER)
+print(socket.gethostname())
 
 # server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # stok_steam means we are using TCP - transmission contro protocol
