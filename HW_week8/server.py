@@ -3,7 +3,7 @@ import threading  # multiple way to create multipule threads in one pipe line pr
 import time
 
 time.sleep(1)
-print("helloы")
+print("hellow")
 
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # stok_steam means we are using TCP - transmission contro protocol
