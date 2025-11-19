@@ -8,6 +8,6 @@ while true; do
 		git commit -m "auto commit $(date)" || true
 		git push
     fi
-    sleep 60
+    sleep 30
 done
 
