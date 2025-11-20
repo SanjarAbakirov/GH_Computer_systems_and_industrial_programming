@@ -24,6 +24,7 @@ def handle_client(conn, addr):
     while True:
         connected = True
         while connected:
+            # decode this msg from its bite format into string using UTF-8
             msg_lenght = conn.recv(HEADER).decode(FORMAT)
             # how many bites we are going to receive
 
