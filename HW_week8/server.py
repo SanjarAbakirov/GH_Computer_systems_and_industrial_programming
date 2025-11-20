@@ -16,7 +16,7 @@ server.bind(ADDR)
 
 def handle_client(conn, addr):
     # hadle coomunication between client and server
-    pass
+    print("[NEW CONNECTION] {addr} connected.")
 
 
 def start():
