@@ -15,7 +15,7 @@ server.bind(ADDR)
 
 
 def handle_client(conn, addr):
-    pass
+    # hadle coomunication between client and server
 
 
 def start():
@@ -25,6 +25,7 @@ def start():
         # conn - object waits new connection fro the server
         # allow us to send information back
         # addr - is information of connection
+        thread = threading.Thread(target=handle_client, args=(conn, addr))
 
 
 print("[STARTING] server is starting...")
