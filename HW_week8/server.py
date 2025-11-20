@@ -22,6 +22,8 @@ def start():
     server.listen()
     while True:
         conn, addr = server.accept()  # waits new connection to the server
+        # conn - object waits new connection fro the server
+        # allow us to send information back
 
 
 print("[STARTING] server is starting...")
