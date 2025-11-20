@@ -1,6 +1,7 @@
 import socket
 import threading  # multiple way to create multipule threads in one pipe line program
 
+HEADER = 64
 PORT = 5050
 # SERVER = "192.168.31.127"
 SERVER = socket.gethostbyname(socket.gethostname())
