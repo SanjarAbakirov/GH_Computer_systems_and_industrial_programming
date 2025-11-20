@@ -8,7 +8,6 @@ SERVER = socket.gethostbyname(socket.gethostname())
 print(SERVER)
 print(socket.gethostname())  # name represent computer as adress
 ADDR = (SERVER, PORT)
-
 # what type of ip adress we are looking for - specific connetions
 # default option for streaming data
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
