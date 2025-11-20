@@ -1,7 +1,6 @@
 import socket
 import threading  # multiple way to create multipule threads in one pipe line program
 
-
 HEADER = 64  # 64 TELLS message that is going to come next
 PORT = 5050
 # SERVER = "192.168.31.127"
