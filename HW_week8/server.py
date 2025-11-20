@@ -21,6 +21,7 @@ def handle_client(conn, addr):
     while True:
         connected = True
         while connected:
+            msg = conn.recv()
 
 
 def start():
