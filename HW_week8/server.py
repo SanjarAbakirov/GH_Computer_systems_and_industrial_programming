@@ -11,6 +11,8 @@ print(socket.gethostname())  # name represent computer as adress
 ADDR = (SERVER, PORT)
 # what type of ip adress we are looking for - specific connetions
 # default option for streaming data
+FORMAT = 'utf-8'
+
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind(ADDR)
 
@@ -22,7 +24,7 @@ def handle_client(conn, addr):
     while True:
         connected = True
         while connected:
-            msg_lenght = conn.recv(HEADER)
+            msg_lenght = conn.recv(HEADER).decode()
             # how many bites we are going to receive
 
 
