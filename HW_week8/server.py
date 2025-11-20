@@ -19,7 +19,9 @@ def handle_client(conn, addr):
 
 
 def start():
-    pass
+    server.listen()
+    while True:
+        conn, addr = server.accept()
 
 
 print("[STARTING] server is starting...")
