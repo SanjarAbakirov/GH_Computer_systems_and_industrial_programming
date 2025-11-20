@@ -7,7 +7,7 @@ PORT = 5050
 SERVER = socket.gethostbyname(socket.gethostname())
 # means get the ip adress of this computer
 
-print(socket.gethostname())  # name represent computer as adress
+# print(socket.gethostname())  # name represent computer as adress
 ADDR = (SERVER, PORT)
 # what type of ip adress we are looking for - specific connetions
 # default option for streaming data
