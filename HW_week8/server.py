@@ -29,7 +29,7 @@ def handle_client(conn, addr):
             # how many bites we are going to receive
             msg_length = int(msg_lenght)
             msg = conn.recv(msg_lenght).decode(FORMAT)
-            print(f"[{addr}] {msg}")
+            print(f"[{addr}] {msg}")  # handling the disconnection clearly
 
 
 def start():
