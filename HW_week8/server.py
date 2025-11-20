@@ -24,6 +24,7 @@ def start():
         conn, addr = server.accept()  # waits new connection to the server
         # conn - object waits new connection fro the server
         # allow us to send information back
+        # addr - is information of connection
 
 
 print("[STARTING] server is starting...")
