@@ -7,7 +7,6 @@ SERVER = socket.gethostbyname(socket.gethostname())
 # means get the ip adress of this computer
 print(SERVER)
 print(socket.gethostname())  # name represent computer
-
 # so let's put address to this server
 ADDR = (SERVER, PORT)
 
