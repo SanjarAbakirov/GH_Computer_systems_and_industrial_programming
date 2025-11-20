@@ -18,6 +18,10 @@ def handle_client(conn, addr):
     # hadle coomunication between client and server
     print("[NEW CONNECTION] {addr} connected.")
 
+    while True:
+        connected = True
+        while connected:
+
 
 def start():
     server.listen()
