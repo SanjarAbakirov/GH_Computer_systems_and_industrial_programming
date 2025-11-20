@@ -22,7 +22,7 @@ def handle_client(conn, addr):
     while True:
         connected = True
         while connected:
-            msg = conn.recv()
+            msg_lenght = conn.recv(HEADER)
             # how many bites we are going to receive
 
 
