@@ -30,8 +30,8 @@ def handle_client(conn, addr):
             msg_length = conn.recv(HEADER).decode(FORMAT)
             # how many bites we are going to receive
             if msg_length:
-                msg_length = int(msg_lenght)
-                msg = conn.recv(msg_lenght).decode(FORMAT)
+                msg_length = int(msg_length)
+                msg = conn.recv(msg_length).decode(FORMAT)
                 if msg == DISCONNECT_MESSAGE:
                     connected = False
 
