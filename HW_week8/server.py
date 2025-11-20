@@ -28,6 +28,7 @@ def handle_client(conn, addr):
             msg_lenght = conn.recv(HEADER).decode(FORMAT)
             # how many bites we are going to receive
             msg_length = int(msg_lenght)
+            msg = conn.recv(msg_lenght).decode(FORMAT)
 
 
 def start():
