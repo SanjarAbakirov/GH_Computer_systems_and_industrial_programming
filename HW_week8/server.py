@@ -30,6 +30,8 @@ def handle_client(conn, addr):
             # how many bites we are going to receive
             msg_length = int(msg_lenght)
             msg = conn.recv(msg_lenght).decode(FORMAT)
+            if msg == DISCONNECT_MESSAGE:
+                connected = False
             print(f"[{addr}] {msg}")  # handling the disconnection clearly
 
 
