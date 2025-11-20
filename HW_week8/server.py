@@ -27,6 +27,7 @@ def start():
         # addr - is information of connection
         thread = threading.Thread(target=handle_client, args=(conn, addr))
         thread.start()
+        print("[ACTIVE CONNECTIONS] {threading.activeCount - 1}")
 
 
 print("[STARTING] server is starting...")
