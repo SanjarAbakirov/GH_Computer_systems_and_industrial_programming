@@ -26,6 +26,7 @@ def start():
         # allow us to send information back
         # addr - is information of connection
         thread = threading.Thread(target=handle_client, args=(conn, addr))
+        thread.start()
 
 
 print("[STARTING] server is starting...")
