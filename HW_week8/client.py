@@ -2,7 +2,7 @@ import socket
 
 HEADER = 64  # 64 TELLS message that is going to come next
 PORT = 5050
-FORMAT = 'UTF-8'
+FORMAT = 'utf-8'
 DISCONECT_MESSAGE = "!DISCONNECT"
 SERVER = "192.168.1.26"
 ADDR = (SERVER, PORT)
