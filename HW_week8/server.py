@@ -16,7 +16,7 @@ DISCONECT_MESSAGE = "!DISCONNECT"
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # AF_INET - what type of IP adress we are looking for
-# OCK_STREAM - it is a method
+# SOCK_STREAM - it is a method
 server.bind(ADDR)  # bound socke to this adress
 
 
