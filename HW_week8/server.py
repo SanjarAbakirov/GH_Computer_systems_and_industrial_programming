@@ -50,7 +50,6 @@ def start():
         conn, addr = server.accept()  # waits new connection to the server
         # conn - object waits new connection fro the server
         # allow us to send information back
-        # addr - is information of connection
         thread = threading.Thread(target=handle_client, args=(conn, addr))
         thread.start()
         print(f"[ACTIVE CONNECTIONS] {threading.activeCount() - 1}")
