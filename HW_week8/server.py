@@ -31,7 +31,7 @@ def handle_client(conn, addr):
         # we will not pass this kind of code untill we receive the message from client
         msg = conn, recv()
         # decode this msg from its bite format into string using UTF-8
-        msg_length = conn.recv(HEADER).decode(FORMAT)
+        # msg_length = conn.recv(HEADER).decode(FORMAT)
         # how many bites we are going to receive
         if msg_length:
             msg_length = int(msg_length)
