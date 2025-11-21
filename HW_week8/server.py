@@ -4,9 +4,8 @@ import threading  # multiple way to create multipule threads in one pipe line pr
 HEADER = 64  # 64 TELLS message that is going to come next
 PORT = 5050
 # means get the ip adress automatically of this computer
-SERVER = socket.gethostbyname(socket.gethostname())
-
 # print(socket.gethostname())  # name represent computer as adress
+SERVER = socket.gethostbyname(socket.gethostname())
 ADDR = (SERVER, PORT)
 # what type of ip adress we are looking for - specific connetions
 # default option for streaming data
