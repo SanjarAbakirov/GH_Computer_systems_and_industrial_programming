@@ -3,8 +3,8 @@ import threading  # multiple way to create multipule threads in one pipe line pr
 
 HEADER = 64  # 64 TELLS message that is going to come next
 PORT = 5050
-SERVER = socket.gethostbyname(socket.gethostname())
 # means get the ip adress automatically of this computer
+SERVER = socket.gethostbyname(socket.gethostname())
 
 # print(socket.gethostname())  # name represent computer as adress
 ADDR = (SERVER, PORT)
