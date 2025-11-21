@@ -19,6 +19,8 @@ server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # now we need bind this thrue the address
 server.bind(ADDR)  # bound socket to this adress (SERVER, PORT)
 
+# ---setting up for listening-----
+
 
 def handle_client(conn, addr):
     # hadle coomunication between client and server
