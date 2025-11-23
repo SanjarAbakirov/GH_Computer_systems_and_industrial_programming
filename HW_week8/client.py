@@ -21,3 +21,7 @@ def send(msg):
 
 
 send("Hello!")
+send("Hello Everyone")
+send("Hello Team")
+
+send(DISCONECT_MESSAGE)
