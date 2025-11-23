@@ -22,8 +22,8 @@ def send(msg):
 
 send("Hello!")
 input()
-send("Hello Everyone")
+send("Please push Enter btn")
 input()
-send("Hello Team")
+send("Hello Sam")
 
 send(DISCONECT_MESSAGE)
