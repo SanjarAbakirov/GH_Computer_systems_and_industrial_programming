@@ -46,7 +46,7 @@ def start():
     server.listen()
     print(f"[LISTENING] Server is listening on {SERVER}")
     while True:
-        conn, addr = server.accept()  # waits new connection to the server
+        conn, addr = server._accept()  # waits new connection to the server
         # conn - object waits new connection fro the server
         # allow us to send information back
         thread = threading.Thread(target=handle_client, args=(conn, addr))
