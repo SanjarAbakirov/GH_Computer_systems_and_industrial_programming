@@ -18,3 +18,6 @@ def send(msg):
     send_length += b' ' * (HEADER - len(send_length))
     client.send(send_length)
     client.send(message)
+
+
+send("Hello!")
