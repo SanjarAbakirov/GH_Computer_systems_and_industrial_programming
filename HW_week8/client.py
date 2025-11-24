@@ -22,9 +22,9 @@ def send(msg):
 
 
 send("Hello World!")
-# input()
+input()
 send("Please push Enter btn")
-# input()
+input()
 send("Hello Sam")
 
 send(DISCONECT_MESSAGE)
