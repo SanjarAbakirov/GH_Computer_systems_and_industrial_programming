@@ -26,8 +26,7 @@ def handle_client(conn, addr):
     # hadle coomunication between client and server
     print(f"[NEW CONNECTION] {addr} connected.")
 
-    connected = True
-    while connected:
+    while True:
         # we will not pass this kind of code untill we receive the message from client
         # decode this msg from its bite format into string using UTF-8
         msg_length = conn.recv(HEADER).decode(FORMAT)
