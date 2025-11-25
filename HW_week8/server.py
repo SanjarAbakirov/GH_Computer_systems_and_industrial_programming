@@ -51,7 +51,7 @@ def start():
         thread.start()
         print(f"[ACTIVE CONNECTIONS] {threading.active_count() - 1}")
 
-    conn.settimeout(5)
+    # conn.settimeout(5)
 
 
 print("[STARTING] server is starting...")
