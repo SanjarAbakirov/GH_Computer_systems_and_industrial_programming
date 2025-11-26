@@ -4,7 +4,6 @@ import threading
 HEADER = 64
 PORT = 5050
 # means get the ip adress automatically of this computer
-# print(socket.gethostname())  # name represent computer as adress
 SERVER = socket.gethostbyname(socket.gethostname())
 ADDR = (SERVER, PORT)
 # what type of ip adress we are looking for - specific connetions
