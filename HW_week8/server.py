@@ -1,5 +1,5 @@
 import socket
-import threading  # multiple way to create multipule threads in one pipe line program
+import threading
 
 HEADER = 64
 PORT = 5050
