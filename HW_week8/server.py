@@ -21,7 +21,6 @@ server.bind(ADDR)  # bound socket to this adress (SERVER, PORT)
 
 
 def handle_client(conn, addr):
-    # hadle coomunication between client and server
     print(f"[NEW CONNECTION] {addr} connected.")
 
     while True:
