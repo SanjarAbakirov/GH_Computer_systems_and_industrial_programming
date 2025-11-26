@@ -22,7 +22,6 @@ server.bind(ADDR)  # bound socket to this adress (SERVER, PORT)
 
 def handle_client(conn, addr):
     print(f"[NEW CONNECTION] {addr} connected.")
-
     while True:
         # we will not pass this kind of code untill we receive the message from client
         # decode this msg from its bite format into string using UTF-8
