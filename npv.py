@@ -1,21 +1,40 @@
-def analyze_investment(rate, cash_flows, project_name=""):
-    """Комплексный анализ инвестиционного проекта"""
-    npv = 0
-    npv_result = npv(rate, cash_flows)
+def npv(rate, cash_flows):
+    """
+    Рассчитывает чистую приведенную стоимость (NPV)
 
-    print(f"\nАнализ проекта: {project_name}")
-    print(f"Начальная инвестиция: {cash_flows[0]:.2f}")
-    print(f"Ставка дисконтирования: {rate*100:.1f}%")
-    print(f"Расчетный NPV: {npv_result:.2f}")
+    Parameters:
+    rate (float): Ставка дисконтирования (в десятичной форме, например 0.1 для 10%)
+    cash_flows (list): Список денежных потоков, где cash_flows[0] - начальная инвестиция
 
-    # Анализ чувствительности
-    rates = [rate * 0.5, rate, rate * 1.5]
-    print("\nАнализ чувствительности:")
-    for r in rates:
-        sensitivity_npv = npv(r, cash_flows)
-        print(f"При ставке {r*100:.1f}%: NPV = {sensitivity_npv:.2f}")
+    Returns:
+    float: Значение NPV
+    """
+    npv_value = 0
+    for t, cash_flow in enumerate(cash_flows):
+        npv_value += cash_flow / ((1 + rate) ** t)
+    return npv_value
+
+# Альтернативная реализация с использованием list comprehension
 
 
-# Пример комплексного анализа
-project_cash_flows = [-50000, 15000, 20000, 25000, 30000, 20000]
-analyze_investment(0.12, project_cash_flows, "Завод по производству")
+def npv_compact(rate, cash_flows):
+    """Компактная версия расчета NPV"""
+    return sum(cash_flow / ((1 + rate) ** t) for t, cash_flow in enumerate(cash_flows))
+
+
+# Пример использования
+if __name__ == "__main__":
+    # Пример: инвестиционный проект
+    discount_rate = 0.1  # 10% ставка дисконтирования
+    cash_flows = [-1000, 300, 400, 500, 200]  # -1000 - начальная инвестиция
+
+    result = npv(discount_rate, cash_flows)
+    print(f"NPV проекта: {result:.2f}")
+
+    # Анализ результата
+    if result > 0:
+        print("Проект следует принять (NPV > 0)")
+    elif result < 0:
+        print("Проект следует отклонить (NPV < 0)")
+    else:
+        print("Проект безубыточен (NPV = 0)")
