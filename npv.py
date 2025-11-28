@@ -26,7 +26,7 @@ def npv_compact(rate, cash_flows):
 if __name__ == "__main__":
     # Пример: инвестиционный проект
     discount_rate = 0.1  # 10% ставка дисконтирования
-    cash_flows = [-1000, 300, 400, 500, 200]  # -1000 - начальная инвестиция
+    cash_flows = [-1400, 300, 400, 500, 200]  # -1000 - начальная инвестиция
 
     result = npv(discount_rate, cash_flows)
     print(f"NPV проекта: {result:.2f}")
