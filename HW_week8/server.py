@@ -44,6 +44,8 @@ def handle_http_request(request):
         request_line = lines[0]
         parts = request_line.split('')
 
+        if len(parts) != 3:
+            return create_http_responce(400, "Bad Request")
         # processing different threads
         if path == "/":
             return create_http_responce(200, "Welcome to Sam's Server")
