@@ -26,7 +26,6 @@ def handle_client(conn, addr):
     print(f"[NEW CONNECTION] {addr} connected.")
     while True:
         # we will not pass this kind of code untill we receive the message from client
-        # decode this msg from its bite format into string using UTF-8
         msg_length = conn.recv(HEADER).decode(FORMAT)
         if msg_length:
             msg_length = int(msg_length)
