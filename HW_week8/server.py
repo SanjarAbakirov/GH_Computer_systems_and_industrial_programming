@@ -16,7 +16,7 @@ server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # TCP
 server.bind(ADDR)  # bound socket to this adress (SERVER, PORT)
 
 
-def create_http_responce(status_code, body):
+def create_http_responce(status_code, body, content_type="text/plain"):
     # created HTTP- response bar with status
     status_codes = {
         200: "200 Ok",
