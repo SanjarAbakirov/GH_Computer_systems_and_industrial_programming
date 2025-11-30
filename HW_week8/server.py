@@ -32,7 +32,7 @@ def create_http_responce(status_code, body):
     responce += "\r\n"  # empty str - end of headers
     responce += body
 
-    return response
+    return responce
 
 
 def handle_http_request(request):
