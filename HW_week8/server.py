@@ -31,10 +31,9 @@ def handle_client(conn, addr):
                     print(f"[{addr}] disconnected")
                 else:
                     print(f"[{addr}] {msg}")
-        except:
 
-                connected = False
-            print(f"[{addr}] {msg}")  # handling the disconnection clearly
+        except:
+            print(f"[ERROR] with {addr}: {e}sss")
         break
     conn.close()  # closed disconnection
 
