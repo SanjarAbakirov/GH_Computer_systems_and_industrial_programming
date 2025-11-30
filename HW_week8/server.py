@@ -45,6 +45,7 @@ def handle_htp_request(request):
     request_line = lines[0]
     method, path, version = request_line.split('')
     print(f"[HTTP] {method} {path}")
+    # processing different threads
 
 
 def start():
@@ -57,7 +58,6 @@ def start():
         thread = threading.Thread(target=handle_client, args=(conn, addr))
         thread.start()
         print(f"[ACTIVE CONNECTIONS] {threading.active_count() - 1}")
-
 
     # conn.settimeout(5)
 print("[STARTING] server is starting...")
