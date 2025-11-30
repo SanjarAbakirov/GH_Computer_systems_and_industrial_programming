@@ -28,7 +28,6 @@ def handle_client(conn, addr):  # HTTP
                 if msg.startswith("GET") or msg.startswith("POST"):
                     http_response = handle_http_request(msg)
                     conn.send(http_response.encode(FORMAT))
-
                 elif msg == DISCONECT_MESSAGE:
                     connected = False
                     print(f"[{addr}] disconnected")
