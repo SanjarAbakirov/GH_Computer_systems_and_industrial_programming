@@ -46,6 +46,8 @@ def handle_htp_request(request):
     method, path, version = request_line.split('')
     print(f"[HTTP] {method} {path}")
     # processing different threads
+    if path == "/":
+        return create_http_response(200, "Welcome to Sam's Server")
 
 
 def start():
