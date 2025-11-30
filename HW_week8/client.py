@@ -21,7 +21,7 @@ def send(msg):
     client.send(message)
 
 
-send("The World! is the best")
+send("Establishsing the control!")
 input()
 send("Please push Enter btn")
 input()
