@@ -15,8 +15,6 @@ DISCONECT_MESSAGE = "!DISCONNECT"
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind(ADDR)  # bound socket to this adress (SERVER, PORT)
 
-# ---setting up for listening-----
-
 
 def handle_client(conn, addr):
     print(f"[NEW CONNECTION] {addr} connected.")
