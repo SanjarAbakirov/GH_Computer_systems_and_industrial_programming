@@ -1,5 +1,4 @@
 # tipycal Transmission Control Protocol
-
 import socket
 import threading
 
