@@ -53,7 +53,6 @@ def handle_http_request(request):
         # path
         if path == "/":
             html = "<html><body><h1>Welcome to Server</h1></body></html>"
-
             return create_http_responce(200, "Welcome to Sam's Server")
         elif path == "/status":
             return create_http_responce(200, "Server is running")
