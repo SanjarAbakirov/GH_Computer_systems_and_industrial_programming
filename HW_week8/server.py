@@ -10,7 +10,7 @@ ADDR = (SERVER, PORT)
 FORMAT = 'utf-8'
 DISCONECT_MESSAGE = "!DISCONNECT"
 
-server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # TCP
 server.bind(ADDR)  # bound socket to this adress (SERVER, PORT)
 
 
@@ -46,6 +46,7 @@ def start():
         thread = threading.Thread(target=handle_client, args=(conn, addr))
         thread.start()
         print(f"[ACTIVE CONNECTIONS] {threading.active_count() - 1}")
+
 
     # conn.settimeout(5)
 print("[STARTING] server is starting...")
