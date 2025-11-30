@@ -52,6 +52,8 @@ def handle_http_request(request):
 
         # path
         if path == "/":
+            html = "<html><body><h1>Welcome to Server</h1></body></html>"
+
             return create_http_responce(200, "Welcome to Sam's Server")
         elif path == "/status":
             return create_http_responce(200, "Server is running")
@@ -59,6 +61,9 @@ def handle_http_request(request):
             return create_http_responce(200, '{"data": "some json here"}')
         else:
             return create_http_responce(404, "Page not found")
+
+    exept Exception as e:
+        return create_http_responce(500, f"Server Error: {e}")
 
 
 def handle_client(conn, addr):  # HTTP
@@ -97,7 +102,6 @@ def start():
         thread = threading.Thread(target=handle_client, args=(conn, addr))
         thread.start()
         print(f"[ACTIVE CONNECTIONS] {threading.active_count() - 1}")
-
 
     # conn.settimeout(5)
 print("[STARTING] server is starting...")
