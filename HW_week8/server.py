@@ -34,7 +34,8 @@ def handle_client(conn, addr):
 
         except:
             print(f"[ERROR] with {addr}: {e}sss")
-        break
+            break
+
     conn.close()  # closed disconnection
 
 
