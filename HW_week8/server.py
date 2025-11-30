@@ -16,7 +16,7 @@ server.bind(ADDR)  # bound socket to this adress (SERVER, PORT)
 
 def create_http_responce(status_code, body):
     # created HTTP- response bar with status
-    status_code = {
+    status_codes = {
         200: "200 Ok",
         201: "201 Created",
         400: "400 Bad request",
