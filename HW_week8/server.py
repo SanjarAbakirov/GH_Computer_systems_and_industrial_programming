@@ -9,7 +9,6 @@ PORT = 5050
 SERVER = socket.gethostbyname(socket.gethostname())
 ADDR = (SERVER, PORT)
 # what type of ip adress we are looking for - specific connetions
-# default option for streaming data
 FORMAT = 'utf-8'
 DISCONECT_MESSAGE = "!DISCONNECT"
 
