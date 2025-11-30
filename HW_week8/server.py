@@ -27,6 +27,7 @@ def create_http_responce(status_code, body):
 
     responce = f"HTTP/1.1 {status_text}\r\n"
     responce += "Content-Type: text/plain\r\n"
+    responce += f"Content-Type: text/plain\r\n"
 
 
 def handle_http_request(request):
@@ -81,7 +82,6 @@ def start():
         thread = threading.Thread(target=handle_client, args=(conn, addr))
         thread.start()
         print(f"[ACTIVE CONNECTIONS] {threading.active_count() - 1}")
-
 
     # conn.settimeout(5)
 print("[STARTING] server is starting...")
