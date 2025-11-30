@@ -19,10 +19,15 @@ server.bind(ADDR)  # bound socket to this adress (SERVER, PORT)
 def handle_client(conn, addr):
     print(f"[Warning! NEW CONNECTION] {addr} connected.")
     connected = True
-    while connected:
-        msg_length = conn.recv(HEADER).decode(FORMAT)
-        if msg_length:
-            msg_length = int(msg_length)
+    while connected:  # the code will be occured if we receive message from client
+        try:
+            msg_length = conn.recv(HEADER).decode(FORMAT)
+            if msg_length:
+                msg_length = int(msg_length)
+                msg = conn.recv(msg_length).decode(FORMAT)
+
+        except:
+
             msg = conn.recv(msg_length).decode(FORMAT)
             if msg == DISCONECT_MESSAGE:
                 connected = False
