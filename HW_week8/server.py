@@ -23,6 +23,7 @@ def create_http_responce(status_code, body):
         404: "404 Not found",
         500: "500 Initial Server Error"
     }
+    status_text = status_codes.get(status_code, "500 Internal Server Error")
 
 
 def handle_http_request(request):
