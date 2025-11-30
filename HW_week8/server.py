@@ -26,6 +26,7 @@ def create_http_responce(status_code, body):
     status_text = status_codes.get(status_code, "500 Internal Server Error")
 
     responce = f"HTTP/1.1 {status_text}\r\n"
+    responce += "Content-Type: text/plain\r\n"
 
 
 def handle_http_request(request):
