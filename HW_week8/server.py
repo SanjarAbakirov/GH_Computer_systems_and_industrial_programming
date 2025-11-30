@@ -30,6 +30,7 @@ def create_http_responce(status_code, body):
     responce += f"Cknnect-Length: {len(body)}\r\n"
     responce += "Connection: close\r\n"
     responce += "\r\n"  # empty str - end of headers
+    responce += body
 
 
 def handle_http_request(request):
