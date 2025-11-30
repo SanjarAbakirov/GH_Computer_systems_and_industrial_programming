@@ -24,6 +24,9 @@ def handle_client(conn, addr):  # HTTP
                 msg_length = int(msg_length)
                 msg = conn.recv(msg_length).decode(FORMAT)
 
+
+# our http request processing
+
                 if msg == DISCONECT_MESSAGE:
                     connected = False
                     print(f"[{addr}] disconnected")
