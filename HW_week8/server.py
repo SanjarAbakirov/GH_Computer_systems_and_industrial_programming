@@ -38,19 +38,21 @@ def create_http_responce(status_code, body, content_type="text/plain"):
 
 
 def handle_http_request(request):
-    lines = request.split('r/n')
-    request_line = lines[0]
-    method, path, version = request_line.split('')
-    print(f"[HTTP] {method} {path}")
-    # processing different threads
-    if path == "/":
-        return create_http_responce(200, "Welcome to Sam's Server")
-    elif path == "/status":
-        return create_http_responce(200, "Server is running")
-    elif path == "api/data":
-        return create_http_responce(200, '{"data": "some json here"}')
-    else:
-        return create_http_responce(404, "Page not found")
+
+    try:
+        lines = request.split('r/n')
+        request_line = lines[0]
+        parts = request_line.split('')
+        print(f"[HTTP] {method} {path}")
+        # processing different threads
+        if path == "/":
+            return create_http_responce(200, "Welcome to Sam's Server")
+        elif path == "/status":
+            return create_http_responce(200, "Server is running")
+        elif path == "api/data":
+            return create_http_responce(200, '{"data": "some json here"}')
+        else:
+            return create_http_responce(404, "Page not found")
 
 
 def handle_client(conn, addr):  # HTTP
