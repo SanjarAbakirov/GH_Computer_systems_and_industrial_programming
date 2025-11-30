@@ -14,7 +14,7 @@ server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # TCP
 server.bind(ADDR)  # bound socket to this adress (SERVER, PORT)
 
 
-def handle_htp_request(request):
+def handle_http_request(request):
     lines = request.split('r/n')
     request_line = lines[0]
     method, path, version = request_line.split('')
