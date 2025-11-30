@@ -46,6 +46,7 @@ def handle_http_request(request):
 
         if len(parts) != 3:
             return create_http_responce(400, "Bad Request")
+
         method, path, version = parts
         print(f"[HTTP] {method} {path}")
 
