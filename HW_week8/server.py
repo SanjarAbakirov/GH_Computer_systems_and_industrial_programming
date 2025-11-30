@@ -47,6 +47,7 @@ def start():
         thread.start()
         print(f"[ACTIVE CONNECTIONS] {threading.active_count() - 1}")
 
+
     # conn.settimeout(5)
 print("[STARTING] server is starting...")
 # server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
