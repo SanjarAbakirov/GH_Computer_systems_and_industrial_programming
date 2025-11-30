@@ -14,6 +14,22 @@ server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # TCP
 server.bind(ADDR)  # bound socket to this adress (SERVER, PORT)
 
 
+def handle_htp_request(request):
+    lines = request.split('r/n')
+    request_line = lines[0]
+    method, path, version = request_line.split('')
+    print(f"[HTTP] {method} {path}")
+    # processing different threads
+    if path == "/":
+        return create_http_response(200, "Welcome to Sam's Server")
+    elif path == "/status":
+        return create_http_reposnde(200, "Server is running")
+    elif path == "api/data":
+        return create_http_responce(200, '{"data": "some json here"}')
+    else:
+        return create_http_responce(404, "Page not found")
+
+
 def handle_client(conn, addr):  # HTTP
     print(f"[Warning! NEW CONNECTION] {addr} connected.")
     connected = True
@@ -40,22 +56,6 @@ def handle_client(conn, addr):  # HTTP
     conn.close()  # closed disconnection
 
 
-def handle_htp_request(request):
-    lines = request.split('r/n')
-    request_line = lines[0]
-    method, path, version = request_line.split('')
-    print(f"[HTTP] {method} {path}")
-    # processing different threads
-    if path == "/":
-        return create_http_response(200, "Welcome to Sam's Server")
-    elif path == "/status":
-        return create_http_reposnde(200, "Server is running")
-    elif path == "api/data":
-        return create_http_responce(200, '{"data": "some json here"}')
-    else:
-        return create_http_responce(404, "Page not found")
-
-
 def start():
     server.listen()
     print(f"[READY TO RECEIVE DATA] Server is listening on {SERVER}")
@@ -66,6 +66,7 @@ def start():
         thread = threading.Thread(target=handle_client, args=(conn, addr))
         thread.start()
         print(f"[ACTIVE CONNECTIONS] {threading.active_count() - 1}")
+
 
     # conn.settimeout(5)
 print("[STARTING] server is starting...")
