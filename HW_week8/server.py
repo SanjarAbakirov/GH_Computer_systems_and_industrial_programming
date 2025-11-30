@@ -43,7 +43,7 @@ def handle_http_request(request):
         lines = request.split('r/n')
         request_line = lines[0]
         parts = request_line.split('')
-        print(f"[HTTP] {method} {path}")
+
         # processing different threads
         if path == "/":
             return create_http_responce(200, "Welcome to Sam's Server")
