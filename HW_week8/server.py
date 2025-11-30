@@ -40,6 +40,12 @@ def handle_client(conn, addr):  # HTTP
     conn.close()  # closed disconnection
 
 
+def handle_htp_request(request):
+    lines = request.split('r/n')
+    request_line = lines[0]
+    method, path, version = request_line.split('')
+
+
 def start():
     server.listen()
     print(f"[READY TO RECEIVE DATA] Server is listening on {SERVER}")
@@ -50,6 +56,7 @@ def start():
         thread = threading.Thread(target=handle_client, args=(conn, addr))
         thread.start()
         print(f"[ACTIVE CONNECTIONS] {threading.active_count() - 1}")
+
 
     # conn.settimeout(5)
 print("[STARTING] server is starting...")
