@@ -25,6 +25,8 @@ def create_http_responce(status_code, body):
     }
     status_text = status_codes.get(status_code, "500 Internal Server Error")
 
+    responce = f"HTTP/1.1 {status_text}\r\n"
+
 
 def handle_http_request(request):
     lines = request.split('r/n')
@@ -78,6 +80,7 @@ def start():
         thread = threading.Thread(target=handle_client, args=(conn, addr))
         thread.start()
         print(f"[ACTIVE CONNECTIONS] {threading.active_count() - 1}")
+
 
     # conn.settimeout(5)
 print("[STARTING] server is starting...")
