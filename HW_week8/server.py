@@ -27,7 +27,7 @@ def create_http_responce(status_code, body):
 
     responce = f"HTTP/1.1 {status_text}\r\n"
     responce += "Content-Type: text/plain\r\n"
-    responce += f"Content-Type: text/plain\r\n"
+    responce += f"Cknnect-Length: {len(body)}\r\n"
 
 
 def handle_http_request(request):
