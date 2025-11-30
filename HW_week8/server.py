@@ -1,6 +1,8 @@
 # tipycal Transmission Control Protocol
 import socket
 import threading
+from datetime import datetime
+
 HEADER = 64
 PORT = 5050
 # means get the ip adress automatically of this computer
