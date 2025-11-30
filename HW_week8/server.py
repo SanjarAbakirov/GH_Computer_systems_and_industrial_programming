@@ -57,8 +57,10 @@ def handle_http_request(request):
 
         elif path == "/status":
             status_info = f"Server: {SERVER}\nTime: {datetime.now()}\nConnections: {threading.active_count() - 1}"
+            return create_http_responce(200, status_info)
+
         elif path == "api/data":
-            return create_http_responce(200, '{"data": "some json here"}')
+            json_data = '{"status": "success", "data": API Responce" ome json here"}'
         else:
             return create_http_responce(404, "Page not found")
 
