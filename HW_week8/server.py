@@ -28,7 +28,7 @@ def create_http_responce(status_code, body, content_type="text/plain"):
     status_text = status_codes.get(status_code, "500 Internal Server Error")
 
     responce = f"HTTP/1.1 {status_text}\r\n"
-    responce += f"Content-Type: {content_type}r\n"
+    responce += f"Content-Type: {content_type}\r\n"
     responce += f"Cknnect-Length: {len(body)}\r\n"
     responce += "Connection: close\r\n"
     responce += "\r\n"  # empty str - end of headers
