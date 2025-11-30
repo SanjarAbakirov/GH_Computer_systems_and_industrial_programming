@@ -14,6 +14,10 @@ server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # TCP
 server.bind(ADDR)  # bound socket to this adress (SERVER, PORT)
 
 
+def create_http_responce(status_code, body):
+    # created HTTP- response bar with status
+
+
 def handle_http_request(request):
     lines = request.split('r/n')
     request_line = lines[0]
@@ -66,7 +70,6 @@ def start():
         thread = threading.Thread(target=handle_client, args=(conn, addr))
         thread.start()
         print(f"[ACTIVE CONNECTIONS] {threading.active_count() - 1}")
-
 
     # conn.settimeout(5)
 print("[STARTING] server is starting...")
