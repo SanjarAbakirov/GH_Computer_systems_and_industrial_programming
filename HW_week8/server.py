@@ -44,7 +44,6 @@ def handle_htp_request(request):
     lines = request.split('r/n')
     request_line = lines[0]
     method, path, version = request_line.split('')
-
     print(f"[HTTP] {method} {path}")
 
 
