@@ -4,7 +4,7 @@ import threading
 HEADER = 64
 PORT = 5050
 # means get the ip adress automatically of this computer
-SERVER = socket.gethostbyname(socket.gethostname())
+SERVER = socket.gethostbyname(socket.gethostname())  # TCP/IP
 ADDR = (SERVER, PORT)
 # what type of ip adress we are looking for - specific connetions
 FORMAT = 'utf-8'
@@ -46,7 +46,6 @@ def start():
         thread = threading.Thread(target=handle_client, args=(conn, addr))
         thread.start()
         print(f"[ACTIVE CONNECTIONS] {threading.active_count() - 1}")
-
 
     # conn.settimeout(5)
 print("[STARTING] server is starting...")
