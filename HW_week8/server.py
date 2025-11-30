@@ -32,9 +32,9 @@ def handle_http_request(request):
     print(f"[HTTP] {method} {path}")
     # processing different threads
     if path == "/":
-        return create_http_response(200, "Welcome to Sam's Server")
+        return create_http_responce(200, "Welcome to Sam's Server")
     elif path == "/status":
-        return create_http_reposnde(200, "Server is running")
+        return create_http_responce(200, "Server is running")
     elif path == "api/data":
         return create_http_responce(200, '{"data": "some json here"}')
     else:
