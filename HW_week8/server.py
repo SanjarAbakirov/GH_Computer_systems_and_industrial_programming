@@ -14,7 +14,7 @@ server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # TCP
 server.bind(ADDR)  # bound socket to this adress (SERVER, PORT)
 
 
-def handle_client(conn, addr):
+def handle_client(conn, addr):  # HTTP
     print(f"[Warning! NEW CONNECTION] {addr} connected.")
     connected = True
     while connected:  # the code will be occured if we receive message from client
@@ -46,7 +46,6 @@ def start():
         thread = threading.Thread(target=handle_client, args=(conn, addr))
         thread.start()
         print(f"[ACTIVE CONNECTIONS] {threading.active_count() - 1}")
-
 
     # conn.settimeout(5)
 print("[STARTING] server is starting...")
