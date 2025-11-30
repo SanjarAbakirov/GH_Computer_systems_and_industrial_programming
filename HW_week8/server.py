@@ -48,7 +48,8 @@ def handle_http_request(request):
             return create_http_responce(400, "Bad Request")
         method, path, version = parts
         print(f"[HTTP] {method} {path}")
-        # processing different threads
+
+        # path
         if path == "/":
             return create_http_responce(200, "Welcome to Sam's Server")
         elif path == "/status":
