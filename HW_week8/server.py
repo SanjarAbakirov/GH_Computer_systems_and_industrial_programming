@@ -38,7 +38,7 @@ def create_http_responce(status_code, body, content_type="text/plain"):
 
 
 def handle_http_request(request):
-
+    # processing requests
     try:
         lines = request.split('r/n')
         request_line = lines[0]
