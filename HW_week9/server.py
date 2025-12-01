@@ -39,7 +39,6 @@ class HTTPRequest:
             if not lines:
                 return
 
-            # Parse request line
             request_line = lines[0]
             parts = request_line.split(' ')
             if len(parts) == 3:
