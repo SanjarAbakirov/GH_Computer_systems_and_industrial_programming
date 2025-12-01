@@ -262,7 +262,6 @@ def handle_http_request(raw_request):
             }
             return create_http_response(200, json.dumps(info), "application/json")
 
-        # API маршруты
         elif request.path.startswith("/api/users"):
             return handle_users_api(request)
 
