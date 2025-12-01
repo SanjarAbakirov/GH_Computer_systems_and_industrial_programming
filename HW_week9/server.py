@@ -294,7 +294,6 @@ def handle_client(conn, addr):
             request_data += chunk
 
             if '\r\n\r\n' in request_data:
-                # Если есть Content-Length, читаем body
                 if 'Content-Length:' in request_data:
                     headers_part = request_data.split('\r\n\r\n')[0]
                     content_length = 0
