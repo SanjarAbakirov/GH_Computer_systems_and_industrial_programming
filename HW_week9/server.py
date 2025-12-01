@@ -15,7 +15,6 @@ server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 server.bind(ADDR)
 
-# База данных в памяти
 users_db = [
     {"id": 1, "name": "John Doe", "email": "john@example.com", "active": True},
     {"id": 2, "name": "Jane Smith", "email": "jane@example.com", "active": True}
