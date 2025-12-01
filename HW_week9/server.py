@@ -106,7 +106,6 @@ class HTTPResponse:
         response += f"Server: CustomPythonServer/1.0\r\n"
         response += f"Date: {datetime.utcnow().strftime('%a, %d %b %Y %H:%M:%S GMT')}\r\n"
 
-        # Add custom headers
         for key, value in self.headers.items():
             response += f"{key}: {value}\r\n"
 
