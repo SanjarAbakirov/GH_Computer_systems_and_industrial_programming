@@ -1,58 +1,49 @@
-import requests
-import json
+import socket
 
 
-def test_api():
-    base_url = "http://localhost:5050"
+def simple_test():
+    print("Testing connection to server...")
+
+    client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    client.settimeout(3)
 
     try:
-        # Тест главной страницы
-        print("1. Testing home page:")
-        response = requests.get(base_url + "/")
-        print(f"Status: {response.status_code}")
+        client.connect(('localhost', 5050))
+        print("✓ Connected to server!")
 
-        # Тест статуса сервера
-        print("\n2. Testing status page:")
-        response = requests.get(base_url + "/status")
-        print(f"Status: {response.status_code}")
-
-        # Тест информации API
-        print("\n3. Testing API info:")
-        response = requests.get(base_url + "/api/info")
-        print(f"Status: {response.status_code}")
-        print(f"Response: {response.json()}")
-
-        # Тест получения пользователей
-        print("\n4. Testing GET /api/users:")
-        response = requests.get(base_url + "/api/users")
-        print(f"Status: {response.status_code}")
-        print(f"Users: {response.json()}")
-
-        # Тест создания пользователя
-        print("\n5. Testing POST /api/users:")
-        new_user = {
-            "name": "Alice Johnson",
-            "email": "alice@example.com"
-        }
-        response = requests.post(
-            base_url + "/api/users",
-            json=new_user,
-            headers={'Content-Type': 'application/json'}
+        request = (
+            "GET / HTTP/1.1\r\n"
+            "Host: localhost:5050\r\n"
+            "Connection: close\r\n"
+            "\r\n"
         )
-        print(f"Status: {response.status_code}")
-        print(f"Response: {response.json()}")
 
-        # Тест получения конкретного пользователя
-        print("\n6. Testing GET /api/users with ID:")
-        response = requests.get(base_url + "/api/users?id=1")
-        print(f"Status: {response.status_code}")
-        print(f"User: {response.json()}")
+        client.send(request.encode())
 
-    except requests.exceptions.ConnectionError:
-        print("Error: Cannot connect to server. Make sure the server is running.")
+        response = client.recv(4096).decode()
+
+        print("\nServer response:")
+        print("-" * 40)
+
+        lines = response.split('\r\n')
+        if lines:
+            print(f"Status: {lines[0]}")
+
+        if '\r\n\r\n' in response:
+            body = response.split('\r\n\r\n')[1]
+            print(f"\nBody (first 200 chars):")
+            print(body[:200] + ("..." if len(body) > 200 else ""))
+        print("-" * 40)
+
+    except ConnectionRefusedError:
+        print("Error. Cannot connect to server")
+    except socket.timeout:
+        print("Connection timeout")
     except Exception as e:
         print(f"Error: {e}")
+    finally:
+        client.close()
 
 
 if __name__ == "__main__":
-    test_api()
+    simple_test()
