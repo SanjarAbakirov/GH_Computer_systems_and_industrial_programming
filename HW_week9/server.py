@@ -136,7 +136,7 @@ def handle_users_api(request):
             return create_http_response(200, json.dumps({"users": users_db}), "application/json")
 
     elif request.method == "POST":
-        # POST /api/users - создание пользователя
+
         try:
             data = request.get_json()
             if not data or 'name' not in data or 'email' not in data:
