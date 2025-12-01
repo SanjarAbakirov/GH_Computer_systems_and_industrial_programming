@@ -293,7 +293,6 @@ def handle_client(conn, addr):
             chunk = conn.recv(4096).decode(FORMAT)
             request_data += chunk
 
-            # Проверяем конец HTTP запроса (пустая строка после headers)
             if '\r\n\r\n' in request_data:
                 # Если есть Content-Length, читаем body
                 if 'Content-Length:' in request_data:
