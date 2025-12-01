@@ -286,7 +286,6 @@ def handle_client(conn, addr):
     print(f"[NEW CONNECTION] {addr} connected.")
 
     try:
-        # Читаем весь HTTP запрос
         request_data = ""
         conn.settimeout(5.0)  # Таймаут 5 секунд
 
