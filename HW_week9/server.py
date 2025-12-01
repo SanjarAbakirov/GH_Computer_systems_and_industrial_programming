@@ -121,7 +121,6 @@ def create_http_response(status_code=200, body="", content_type="text/plain", he
 
 
 def handle_users_api(request):
-    """Обработчик API для пользователей"""
     global next_user_id, users_db
 
     if request.method == "GET":
