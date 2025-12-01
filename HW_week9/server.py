@@ -200,7 +200,6 @@ def handle_users_api(request):
 
 
 def handle_http_request(raw_request):
-    """Основной обработчик HTTP запросов"""
     try:
         request = HTTPRequest(raw_request)
         print(f"[HTTP] {request.method} {request.path}")
