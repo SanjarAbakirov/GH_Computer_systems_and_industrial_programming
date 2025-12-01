@@ -1,4 +1,5 @@
 # tipycal Transmission Control Protocol
+
 import socket
 import threading
 from datetime import datetime
@@ -12,7 +13,8 @@ ADDR = (SERVER, PORT)
 FORMAT = 'utf-8'
 DISCONECT_MESSAGE = "!DISCONNECT"
 
-server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # TCP
+# stok_steam means we are using TCP - transmission contro protocol
+server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind(ADDR)  # bound socket to this adress (SERVER, PORT)
 
 
@@ -106,8 +108,9 @@ def start():
         thread.start()
         print(f"[ACTIVE CONNECTIONS] {threading.active_count() - 1}")
 
+
     # conn.settimeout(5)
 print("[STARTING] server is starting...")
-# server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-# stok_steam means we are using TCP - transmission contro protocol
+
+
 start()
