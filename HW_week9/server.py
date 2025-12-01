@@ -61,7 +61,6 @@ class HTTPRequest:
                     self.headers[key.strip()] = value.strip()
                 i += 1
 
-            # Parse body
             if i + 1 < len(lines):
                 self.body = '\r\n'.join(lines[i+1:])
 
