@@ -23,7 +23,6 @@ next_user_id = 3
 
 
 class HTTPRequest:
-    """Класс для парсинга HTTP запросов"""
 
     def __init__(self, raw_request):
         self.method = ""
