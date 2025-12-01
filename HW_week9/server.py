@@ -79,7 +79,6 @@ class HTTPRequest:
 
 
 class HTTPResponse:
-    """Класс для создания HTTP ответов"""
 
     def __init__(self, status_code=200, body="", content_type="text/plain", headers=None):
         self.status_code = status_code
