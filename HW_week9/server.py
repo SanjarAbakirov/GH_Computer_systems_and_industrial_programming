@@ -44,13 +44,11 @@ class HTTPRequest:
             if len(parts) == 3:
                 self.method, full_path, self.version = parts
 
-                # Parse query parameters
                 path_parts = full_path.split('?', 1)
                 self.path = path_parts[0]
                 if len(path_parts) > 1:
                     self.query_params = self.parse_query_params(path_parts[1])
 
-            # Parse headers
             i = 1
             while i < len(lines) and lines[i]:
                 if ':' in lines[i]:
