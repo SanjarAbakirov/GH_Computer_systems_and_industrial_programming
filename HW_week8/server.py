@@ -109,6 +109,4 @@ def start():
 
     # conn.settimeout(5)
 print("[STARTING] server is starting...")
-
-
 start()
