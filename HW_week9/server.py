@@ -182,7 +182,6 @@ def handle_users_api(request):
             if not user:
                 return create_http_response(404, json.dumps({"error": "User not found"}), "application/json")
 
-            # Update user fields
             if 'name' in data:
                 user['name'] = data['name']
             if 'email' in data:
