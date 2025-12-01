@@ -116,7 +116,6 @@ class HTTPResponse:
 
 
 def create_http_response(status_code=200, body="", content_type="text/plain", headers=None):
-    """Быстрое создание HTTP ответа"""
     response = HTTPResponse(status_code, body, content_type, headers)
     return response.build()
 
