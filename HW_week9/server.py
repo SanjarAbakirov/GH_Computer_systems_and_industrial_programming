@@ -124,7 +124,6 @@ def handle_users_api(request):
     global next_user_id, users_db
 
     if request.method == "GET":
-        # GET /api/users или GET /api/users?id=1
         if 'id' in request.query_params:
             user_id = int(request.query_params['id'])
             user = next((u for u in users_db if u['id'] == user_id), None)
