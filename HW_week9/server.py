@@ -170,7 +170,6 @@ def handle_users_api(request):
             return create_http_response(500, json.dumps({"error": str(e)}), "application/json")
 
     elif request.method == "PUT":
-        # PUT /api/users - обновление пользователя
         try:
             data = request.get_json()
             if 'id' not in data:
