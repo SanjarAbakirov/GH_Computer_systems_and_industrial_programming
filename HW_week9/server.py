@@ -311,7 +311,6 @@ def handle_client(conn, addr):
                     request_data = headers_part + '\r\n\r\n' + body_part
                 break
 
-        # Обрабатываем HTTP запрос
         if request_data.strip():
             http_response = handle_http_request(request_data)
             conn.send(http_response.encode(FORMAT))
