@@ -132,7 +132,7 @@ def handle_users_api(request):
             else:
                 return create_http_response(404, json.dumps({"error": "User not found"}), "application/json")
         else:
-            # Return all users
+
             return create_http_response(200, json.dumps({"users": users_db}), "application/json")
 
     elif request.method == "POST":
