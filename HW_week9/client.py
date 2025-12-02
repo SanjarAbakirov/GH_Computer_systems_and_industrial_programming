@@ -3,7 +3,6 @@ import socket
 
 def simple_test():
     print("Testing connection to server...")
-
     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     client.settimeout(3)
 
