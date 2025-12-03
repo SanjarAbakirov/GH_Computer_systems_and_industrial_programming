@@ -21,6 +21,8 @@ users_db = [
 ]
 next_user_id = 3
 
+# web scrapping
+
 
 class HTTPRequest:
 
