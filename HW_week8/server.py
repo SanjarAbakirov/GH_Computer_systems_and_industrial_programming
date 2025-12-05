@@ -6,6 +6,7 @@ HEADER = 64
 PORT = 5050
 # means get the ip adress automatically of this computer
 SERVER = socket.gethostbyname(socket.gethostname())  # TCP/IP
+# SERVER = "192.168.31.127"
 ADDR = (SERVER, PORT)
 # what type of ip adress we are looking for - specific connetions
 FORMAT = 'utf-8'
