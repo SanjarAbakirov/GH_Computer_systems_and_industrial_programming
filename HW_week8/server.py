@@ -90,7 +90,7 @@ def handle_client(conn, addr):  # HTTP
                 else:
                     print(f"[{addr}] {msg}")
         except:
-            print(f"[ERROR] with {addr}: {e}sss")
+            print(f"[ERROR] with {addr}: {e}")
             break
 
     conn.close()  # closed disconnection
