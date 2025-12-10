@@ -6,8 +6,8 @@ import urllib.parse
 
 HEADER = 64
 PORT = 5050
-SERVER = socket.gethostbyname(socket.gethostname())
-# SERVER = "192.168.31.127"
+# SERVER = socket.gethostbyname(socket.gethostname())
+SERVER = "192.168.31.127"
 ADDR = (SERVER, PORT)
 FORMAT = 'utf-8'
 DISCONNECT_MESSAGE = "!DISCONNECT"
@@ -22,10 +22,12 @@ users_db = [
 ]
 next_user_id = 3
 
+# web scrapping
 
-def create_http_responce(status_code, body, content_type="text/plain"):
 
-   def __init__(self, raw_request):
+class HTTPRequest:
+
+    def __init__(self, raw_request):
         self.method = ""
         self.path = ""
         self.version = ""
