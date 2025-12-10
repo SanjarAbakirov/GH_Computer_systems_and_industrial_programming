@@ -23,7 +23,7 @@ users_db = [
 next_user_id = 3
 
 
-def create_http_responce(status_code, body, content_type="text/plain")
+def create_http_responce(status_code, body, content_type="text/plain"):
 
    def __init__(self, raw_request):
         self.method = ""
