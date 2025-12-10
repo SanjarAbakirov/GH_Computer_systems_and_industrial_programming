@@ -22,7 +22,7 @@ def send(msg):
 
 
 send("Establishsing the control!")
-input()
+input(str("add your name"))
 send("Please push Enter btn")
 input()
 send("Hello Sam")
