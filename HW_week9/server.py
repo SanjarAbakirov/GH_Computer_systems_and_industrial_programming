@@ -23,9 +23,9 @@ users_db = [
 next_user_id = 3
 
 
-class HTTPRequest:
+def create_http_responce(status_code, body, content_type="text/plain")
 
-    def __init__(self, raw_request):
+   def __init__(self, raw_request):
         self.method = ""
         self.path = ""
         self.version = ""
