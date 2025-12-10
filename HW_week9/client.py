@@ -12,7 +12,7 @@ def simple_test():
     try:
         # Подключаемся к серверу
         client.connect(('localhost', 5050))
-
+        client.server = "192.168.31.127"
         print("✓ Connected to server!")
 
         # Отправляем ПРАВИЛЬНЫЙ HTTP запрос
