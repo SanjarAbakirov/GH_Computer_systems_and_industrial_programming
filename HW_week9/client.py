@@ -14,8 +14,6 @@ def simple_test():
         client.server = "192.168.31.127"
         print("✓ Connected to server!")
 
-        # Отправляем ПРАВИЛЬНЫЙ HTTP запрос
-        # ВАЖНО: Две пустые строки в конце!
         request = (
             "GET / HTTP/1.1\r\n"
             "Host: localhost:5050\r\n"
