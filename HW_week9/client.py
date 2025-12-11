@@ -10,7 +10,6 @@ def simple_test():
     client.settimeout(5)
 
     try:
-        # Подключаемся к серверу
         client.connect(('localhost', 5050))
         client.server = "192.168.31.127"
         print("✓ Connected to server!")
