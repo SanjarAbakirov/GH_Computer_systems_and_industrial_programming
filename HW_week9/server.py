@@ -63,6 +63,7 @@ class HTTPRequest:
         except Exception as e:
             print(f"Error parsing request: {e}")
 
+# from this point
     def parse_query_params(self, query_string):
         params = {}
         for param in query_string.split('&'):
