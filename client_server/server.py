@@ -10,3 +10,4 @@ while True:
     # client, addr = server.accept()
     # print(client.recv(1024).decode())
     # client.send("Hello from server".encode())
+    data, addr = server.recvfrom(1024)
