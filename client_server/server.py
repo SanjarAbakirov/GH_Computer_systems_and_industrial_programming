@@ -5,5 +5,5 @@ server.bind(('0.0.0.0', 9999))  # automatically
 
 server.listen(5)  # how many connection are alllowed
 
-while True
-client, add = server
+while True:
+client, addr = server
