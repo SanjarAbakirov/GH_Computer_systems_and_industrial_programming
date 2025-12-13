@@ -9,4 +9,4 @@ client.sendto('Hello from client'.encode(), ("127.0.0.1", 9999))
 # print(client.recv(1024).decode())
 
 data, addr = client.recvfrom(1024)
-print(data.ecncode())
+print(data.decode())
