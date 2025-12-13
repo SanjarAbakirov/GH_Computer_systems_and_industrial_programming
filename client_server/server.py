@@ -12,4 +12,4 @@ while True:
     # client.send("Hello from server".encode())
     data, addr = server.recvfrom(1024)
     print(data.decode())
-    server.sendto('Hello from server'.encode())
+    server.sendto('Hello from server'.encode(), addr)
