@@ -8,4 +8,5 @@ POST - write new data - sdded resource
 DELETE - delete junk
 PUT - write update data - replace a resource
 
-CRUD - 
+CRUD - create, read, undate, delete
+
