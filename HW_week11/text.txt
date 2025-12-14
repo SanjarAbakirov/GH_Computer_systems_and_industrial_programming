@@ -12,3 +12,6 @@ CRUD - create, read, undate, delete
 
 POST /drinks
 PUT /drinks/605
+
+Grape - replaced with cola - same resource exist but changes
+
