@@ -4,6 +4,8 @@ usuallly between Python and JS
 usen notation JSON - object notation JS
 
 GET - Retrieve
-POST - write new data
+POST - write new data - sdded resource
 DELETE - delete junk
-PUT - write update data
+PUT - write update data - replace a resource
+
+CRUD - 
