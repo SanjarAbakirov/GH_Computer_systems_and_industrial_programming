@@ -3,3 +3,7 @@ usuallly between Python and JS
 
 usen notation JSON - object notation JS
 
+GET - Retrieve
+POST - write new data
+DELETE - delete junk
+PUT - write update data
