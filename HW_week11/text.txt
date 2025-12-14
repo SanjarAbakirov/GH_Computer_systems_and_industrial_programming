@@ -1,0 +1,5 @@
+REST ARI - application programming interface
+usuallly between Python and JS
+
+usen notation JSON - object notation JS
+
