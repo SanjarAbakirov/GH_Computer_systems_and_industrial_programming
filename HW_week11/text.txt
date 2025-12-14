@@ -10,3 +10,5 @@ PUT - write update data - replace a resource
 
 CRUD - create, read, undate, delete
 
+POST /drinks
+PUT /drinks/605
