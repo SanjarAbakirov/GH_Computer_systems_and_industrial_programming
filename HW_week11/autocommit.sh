@@ -1,13 +1,11 @@
-#!/bin/bash
 echo "Control all changes in $PATH..."
 
 while true; do
-    if ! git diff --quiet || ! git diff --cached --quiet; then
-		echo "Changes defined! Commit and push..."
-		git add .
-		git commit -m "auto commit $(date)" || true
-		git push
+    if ! diff --quiet || ! git diff --cached --quiet; then
+        echo "Changes defined! Commit and push..."
+        git add .
+        git commit -m "auto commit $(date)" || true
+        git push
     fi
-    sleep 10
+    sleep 1
 done
-
