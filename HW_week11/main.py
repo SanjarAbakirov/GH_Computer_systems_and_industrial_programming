@@ -43,6 +43,7 @@ def home():
 
 @app.route("/destinations", methods=["GET"])
 def get_destinations():
+    # fetch every raw in db with json format
     destinations = Destination.query.all()
 
 
