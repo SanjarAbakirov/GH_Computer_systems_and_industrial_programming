@@ -92,6 +92,9 @@ def update_destination(destination_id):
         destination.rating = data.get(
             "rating", destination.destination)
 
+        db.session.commit()
+        return jsonify(destination.to_dict())
+
 
 if __name__ == "__main__":
     app.run(debug=True)
