@@ -59,6 +59,8 @@ def get_destination(destination_id):
     else:
         return jsonify({"error": "Destination not found!"}), 404
 
+# app (to send inf to api)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
