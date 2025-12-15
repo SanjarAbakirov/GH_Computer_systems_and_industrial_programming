@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify, request  # get post put and delete
 from flask_sqlalchemy import SQLAlchemy  # ORM
 
 app = Flask(__name__)
