@@ -46,6 +46,8 @@ def get_destinations():
     # fetch every raw in db with json format
     destinations = Destination.query.all()
 
+    return jsonify
+
 
 if __name__ == "__main__":
     app.run(debug=True)
