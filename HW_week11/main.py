@@ -12,6 +12,7 @@ db = SQLAlchemy(app)
 
 
 class Destination(db.Model):
+    # to fetch the inf like raw and columns
     id = db.Column(db.Integer, primary_key=True)
     destination
     country
