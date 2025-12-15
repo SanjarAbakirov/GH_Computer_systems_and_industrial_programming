@@ -100,6 +100,6 @@ def update_destination(destination_id):
 # Delete
 
 
-@app.route("/destinations/<int:destination_id>,methods=["DELETE]")
+@app.route("/destinations/<int:destination_id>", methods=["DELETE"])
 if __name__ == "__main__":
     app.run(debug=True)
