@@ -97,6 +97,8 @@ def update_destination(destination_id):
     else:
         return jsonify({"error": "Destination not found!"}), 404
 
+# Delete
+
 
 if __name__ == "__main__":
     app.run(debug=True)
