@@ -109,6 +109,9 @@ def delete_destination(destination_id):
 
         return jsonify({"message": "destination was deleted"})
 
+    else:
+        return jsonify({"error": "Destination not found!"}), 404
+
 
 if __name__ == "__main__":
     app.run(debug=True)
