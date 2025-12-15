@@ -48,6 +48,8 @@ def get_destinations():
 
     return jsonify([destination.to_dict()] for destination in destinations)
 
+# http://www.thenerdnook.io/destinations/2
+
 
 if __name__ == "__main__":
     app.run(debug=True)
