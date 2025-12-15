@@ -8,6 +8,10 @@ app = Flask(__name__)
 
 # Create Routes
 
+@app.route("/")
+def home():
+    return {}  # dictionary because we apply to JSON
+
 
 if __name__ == "__main__":
     app.run(debug=True)
