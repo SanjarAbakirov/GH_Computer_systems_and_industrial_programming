@@ -41,6 +41,6 @@ def home():
 # http://www.thenerdnook.io/destinations
 
 
-@app.route("/destinations")
+@app.route("/destinations", methods=["GET"])
 if __name__ == "__main__":
     app.run(debug=True)
