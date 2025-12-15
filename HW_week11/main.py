@@ -51,5 +51,6 @@ def get_destinations():
 # http://www.thenerdnook.io/destinations/2
 
 
+@app.route("/destinations")
 if __name__ == "__main__":
     app.run(debug=True)
