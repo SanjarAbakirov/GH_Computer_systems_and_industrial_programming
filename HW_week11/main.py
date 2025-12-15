@@ -52,5 +52,8 @@ def get_destinations():
 
 
 @app.route("/destinations/<int:destination_id>", methods=["GET"])
+def get_destination():
+
+
 if __name__ == "__main__":
     app.run(debug=True)
