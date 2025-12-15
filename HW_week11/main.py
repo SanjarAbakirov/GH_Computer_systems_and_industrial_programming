@@ -7,6 +7,14 @@ app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///travel.db"
 
 db = SQLAlchemy(app)
+
+# creating model
+
+
+class Destination(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+
+
 # Create Routes
 
 
