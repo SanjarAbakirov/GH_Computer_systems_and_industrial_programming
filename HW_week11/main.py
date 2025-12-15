@@ -18,6 +18,14 @@ class Destination(db.Model):
     country = db.Column(db.String(50), nullable=False)
     rating = db.Column(db.Float, nullable=False)
 
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "destination": self.destination,
+            "country": self.country,
+            "rating": self.rating
+        }
+
 
 # Create Routes
 
