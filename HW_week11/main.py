@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request  # get post put and delete
-from flask_sqlalchemy import SQLAlchemy  # ORM
+from flask_sqlalchemy import SQLAlchemy  # ORM extrahelper f-n
 
 app = Flask(__name__)
 
@@ -9,6 +9,11 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///travel.db"
 db = SQLAlchemy(app)
 
 # build out the model
+
+# curl -X POST \
+#   -H 'Content-Type: application/json' \
+#   -d '{"username": "testuser", "email": "user@example.com"}' \
+#   http://localhost:3000/users
 
 
 class Destination(db.Model):
@@ -27,9 +32,12 @@ class Destination(db.Model):
         }
 
 
-# last thing we need to set up the db:
-with app.app_context():
-    db.create_all()
+SELECT id, name, email, country, phone_number FROM users WHERE id = 20
+
+
+# # last thing we need to set up the db:
+# with app.app_context():
+#     db.create_all()
 
 # http://www.thenerdnook.io/
 # Create Routes
