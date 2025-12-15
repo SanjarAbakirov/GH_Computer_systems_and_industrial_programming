@@ -87,10 +87,8 @@ def update_destination(destination_id):
     if destination:
         destination.destination = data.get(
             "destination", destination.destination)
-
         destination.country = data.get(
             "country", destination.destination)
-
         destination.rating = data.get(
             "rating", destination.destination)
 
