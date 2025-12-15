@@ -103,6 +103,11 @@ def update_destination(destination_id):
 @app.route("/destinations/<int:destination_id>", methods=["DELETE"])
 def delete_destination(destination_id):
     destination = Destination.query.get(destination_id)
+    if destination:
+        db.session.delete(destination)
+        db.session.commit()
+
+        return jsonify("message": "destination was deleted")
 
 
 if __name__ == "__main__":
