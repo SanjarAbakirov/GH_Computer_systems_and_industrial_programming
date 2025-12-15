@@ -107,7 +107,7 @@ def delete_destination(destination_id):
         db.session.delete(destination)
         db.session.commit()
 
-        return jsonify("message": "destination was deleted")
+        return jsonify({"message": "destination was deleted"})
 
 
 if __name__ == "__main__":
