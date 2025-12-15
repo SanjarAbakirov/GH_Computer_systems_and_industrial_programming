@@ -13,6 +13,9 @@ db = SQLAlchemy(app)
 
 class Destination(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    destination
+    country
+    rating
 
 
 # Create Routes
