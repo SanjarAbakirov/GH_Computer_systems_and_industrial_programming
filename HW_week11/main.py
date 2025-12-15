@@ -46,7 +46,7 @@ def get_destinations():
     # fetch every raw in db with json format
     destinations = Destination.query.all()
 
-    return jsonify
+    return jsonify([destination.to_dict()])
 
 
 if __name__ == "__main__":
