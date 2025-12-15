@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy  # ORM
 app = Flask(__name__)
 
 # Create Database
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///"
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///travel.db"
 
 # Create Routes
 
