@@ -75,6 +75,8 @@ def add_destination():
     db.session.add(new_destination)
     db.session.commit()
 
+    return jsonify(new_destination.to_dict()), 201
+
 
 if __name__ == "__main__":
     app.run(debug=True)
