@@ -70,8 +70,10 @@ def add_destination():
     # insert it ot new db
     new_destination = Destination(destination=data["destination"],
                                   country=data["country"],
-                                  rating=data['rating']
-                                  )
+                                  rating=data['rating'])
+    # as a record
+    db.session.add(new_destination)
+    db.session.commit()
 
 
 if __name__ == "__main__":
