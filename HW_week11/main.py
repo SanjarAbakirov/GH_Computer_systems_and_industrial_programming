@@ -31,6 +31,7 @@ class Destination(db.Model):
 with app.app_context():
     db.create_all()
 
+# http://www.thenerdnook.io/
 # Create Routes
 
 
