@@ -56,6 +56,8 @@ def get_destination(destination_id):
     destination = Destination.query.get(destination_id)
     if destination:
         return jsonify(destination_id.to_dict())
+    else:
+        return jsonify({"error": "Destination not found"})
 
 
 if __name__ == "__main__":
