@@ -55,7 +55,7 @@ def get_destinations():
 def get_destination(destination_id):
     destination = Destination.query.get(destination_id)
     if destination:
-        return jsonify
+        return jsonify()
 
 
 if __name__ == "__main__":
