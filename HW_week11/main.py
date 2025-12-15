@@ -14,7 +14,7 @@ db = SQLAlchemy(app)
 class Destination(db.Model):
     # to let api fetch the inf like raw and columns
     id = db.Column(db.Integer, primary_key=True)
-    destination = db.Column()
+    destination = db.Column(db.String(50), nullable=False)
     country = db.Column()
     rating = db.Column()
 
