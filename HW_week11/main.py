@@ -85,7 +85,8 @@ def update_destination(destination_id):
     data = request.get_json()
     destination = Destination.query.get(destination_id)
     if destination:
-        destination.destination = data.get("destination", destination)
+        destination.destination = data.get(
+            "destination", destination.destination)
 
 
 if __name__ == "__main__":
