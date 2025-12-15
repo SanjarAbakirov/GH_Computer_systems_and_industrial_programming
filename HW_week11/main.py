@@ -94,6 +94,8 @@ def update_destination(destination_id):
 
         db.session.commit()
         return jsonify(destination.to_dict())
+    else:
+        return jsonify({"error": "Destination not found!"}), 404
 
 
 if __name__ == "__main__":
