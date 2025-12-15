@@ -64,5 +64,8 @@ def get_destination(destination_id):
 
 
 @app.route("/destinations", methods=["POST"])
+def add_destination()
+
+
 if __name__ == "__main__":
     app.run(debug=True)
