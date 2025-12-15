@@ -38,6 +38,7 @@ with app.app_context():
 @app.route("/")
 def home():
     return jsonify({"message": "Welcome to the Travel API"})
+# http://www.thenerdnook.io/destinations
 
 
 if __name__ == "__main__":
