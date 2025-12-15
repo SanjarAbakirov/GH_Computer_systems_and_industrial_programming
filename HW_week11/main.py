@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, request  # get post put and delete
-from flask_sqlalchemy import SQLAlchemy  # ORM extrahelper f-n
+# ORM extrahelper f-n  -practice with sql
+from flask_sqlalchemy import SQLAlchemy
 # users.GetById(20)
 
 app = Flask(__name__)
