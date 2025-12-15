@@ -52,7 +52,7 @@ def get_destinations():
 
 
 @app.route("/destinations/<int:destination_id>", methods=["GET"])
-def get_destination():
+def get_destination(destination_id):
     destination = Destination.query.get(destination_id)
 
 
