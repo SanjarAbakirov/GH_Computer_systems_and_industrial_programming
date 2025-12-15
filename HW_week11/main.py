@@ -16,7 +16,7 @@ class Destination(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     destination = db.Column(db.String(50), nullable=False)
     country = db.Column(db.String(50), nullable=False)
-    rating = db.Column()
+    rating = db.Column(db.Float, nullable=False)
 
 
 # Create Routes
