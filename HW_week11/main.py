@@ -67,6 +67,8 @@ def get_destination(destination_id):
 def add_destination():
     # parse incoming json body to abstract data
     data = request.get_json()
+    # insert it ot new db
+    new_destination = Destination(des)
 
 
 if __name__ == "__main__":
