@@ -53,7 +53,7 @@ def get_destinations():
 
 @app.route("/destinations/<int:destination_id>", methods=["GET"])
 def get_destination():
-    destination = Destination.query.get()
+    destination = Destination.query.get(destination_id)
 
 
 if __name__ == "__main__":
