@@ -68,7 +68,10 @@ def add_destination():
     # parse incoming json body to abstract data
     data = request.get_json()
     # insert it ot new db
-    new_destination = Destination(destination=data["destination"])
+    new_destination = Destination(destination=data["destination"],
+                                  country=data["country"],
+                                  rating=data['rating']
+                                  )
 
 
 if __name__ == "__main__":
