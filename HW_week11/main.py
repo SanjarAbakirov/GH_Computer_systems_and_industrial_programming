@@ -12,11 +12,11 @@ db = SQLAlchemy(app)
 
 
 class Destination(db.Model):
-    # to fetch the inf like raw and columns
+    # to let api fetch the inf like raw and columns
     id = db.Column(db.Integer, primary_key=True)
-    destination
-    country
-    rating
+    destination = db.Column()
+    country = db.Column()
+    rating = db.Column()
 
 
 # Create Routes
