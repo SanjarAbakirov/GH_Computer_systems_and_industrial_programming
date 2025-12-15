@@ -8,7 +8,7 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///travel.db"
 
 db = SQLAlchemy(app)
 
-# creating model
+# build out the model
 
 
 class Destination(db.Model):
