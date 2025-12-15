@@ -88,6 +88,12 @@ def update_destination(destination_id):
         destination.destination = data.get(
             "destination", destination.destination)
 
+        destination.country = data.get(
+            "country", destination.destination)
+
+        destination.rating = data.get(
+            "rating", destination.destination)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
