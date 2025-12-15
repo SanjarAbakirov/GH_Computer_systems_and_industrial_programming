@@ -51,6 +51,6 @@ def get_destinations():
 # http://www.thenerdnook.io/destinations/2
 
 
-@app.route("/destinations/<int:destination_id>")
+@app.route("/destinations/<int:destination_id>", methods=["GET"])
 if __name__ == "__main__":
     app.run(debug=True)
