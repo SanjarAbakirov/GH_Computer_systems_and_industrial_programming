@@ -65,6 +65,8 @@ def get_destination(destination_id):
 
 @app.route("/destinations", methods=["POST"])
 def add_destination():
+    # parse incoming json body to abstract data
+    data =
 
 
 if __name__ == "__main__":
