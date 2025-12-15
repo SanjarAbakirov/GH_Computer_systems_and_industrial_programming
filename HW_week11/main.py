@@ -81,5 +81,10 @@ def add_destination():
 
 
 @app.route("/destination/<int:destination_id>", methods=["PUT"])
+def update_destination(destination_id):
+    data = request.get_json()
+    destination = Destination.query.get(destination_id)
+
+
 if __name__ == "__main__":
     app.run(debug=True)
