@@ -77,6 +77,9 @@ def add_destination():
 
     return jsonify(new_destination.to_dict()), 201
 
+# PUT -> UPDATE
 
+
+@app.route("/destination/<int:destination_id>", methods=["PUT"])
 if __name__ == "__main__":
     app.run(debug=True)
