@@ -36,7 +36,6 @@ with app.app_context():
 
 @app.route("/")
 def home():
-    # {}  # dictionary because we apply to JSON
     return jsonify({"message": "Welcome to the Travel API"})
 
 
