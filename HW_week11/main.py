@@ -60,7 +60,9 @@ def get_destination(destination_id):
         return jsonify({"error": "Destination not found!"}), 404
 
 # app (to send inf to api)
+# POST Request
 
 
+@app.route("/destinations", methods=["POST"])
 if __name__ == "__main__":
     app.run(debug=True)
