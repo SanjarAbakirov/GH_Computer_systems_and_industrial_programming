@@ -84,6 +84,7 @@ def add_destination():
 def update_destination(destination_id):
     data = request.get_json()
     destination = Destination.query.get(destination_id)
+    if destination:
 
 
 if __name__ == "__main__":
