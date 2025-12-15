@@ -27,6 +27,10 @@ class Destination(db.Model):
         }
 
 
+# last thing we need to set up the db:
+with app.app_context():
+    db.create_all()
+
 # Create Routes
 
 
