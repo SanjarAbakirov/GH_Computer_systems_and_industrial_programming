@@ -6,7 +6,7 @@ app = Flask(__name__)
 # Create Database
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///travel.db"
 
-
+db = SQLAlchemy(app)
 # Create Routes
 
 
