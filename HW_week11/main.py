@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return {}  # dictionary because we apply to JSON
+    return "Hello!"  # {}  # dictionary because we apply to JSON
 
 
 if __name__ == "__main__":
