@@ -41,6 +41,9 @@ def home():
 # http://www.thenerdnook.io/destinations
 
 
-@app.route("/destinations", methods=["GET"])
+@app.route("/destinations", methods=["GET"]):
+    destinations = Destination.query.all()
+
+
 if __name__ == "__main__":
     app.run(debug=True)
