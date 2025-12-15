@@ -101,5 +101,9 @@ def update_destination(destination_id):
 
 
 @app.route("/destinations/<int:destination_id>", methods=["DELETE"])
+def delete_destination(destination_id):
+    destination = Destination.query.get(destination_id)
+
+
 if __name__ == "__main__":
     app.run(debug=True)
