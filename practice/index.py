@@ -21,3 +21,4 @@ while True:
     communiction_socket.send(f"Got your message! Thank you!".encode('utf-8'))
     communiction_socket.close()
     print(f"Connection with {address} ended!")
+# create client now
