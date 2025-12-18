@@ -11,3 +11,5 @@ server.bind((HOST, PORT))
 
 # how many unexepted connection we will allowed to reject a new one
 server.listen(5)
+
+while True:
