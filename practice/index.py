@@ -13,4 +13,9 @@ server.bind((HOST, PORT))
 server.listen(5)
 
 while True:
-    communiction_socket, address = server.accept()
+    communiction_socket, address = server.accept()  # communication method
+    print(f"Connected to {address}")
+    message = communiction_socket.recv(1024).decode(
+        'utf-8')  # expecto receive message from the client
+    print(f"Message from clent is: {message}")
+    communiction_socket.send(f"Got your message! Thank you!")
