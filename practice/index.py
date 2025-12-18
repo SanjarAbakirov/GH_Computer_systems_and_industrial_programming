@@ -18,4 +18,4 @@ while True:
     message = communiction_socket.recv(1024).decode(
         'utf-8')  # expecto receive message from the client
     print(f"Message from clent is: {message}")
-    communiction_socket.send(f"Got your message! Thank you!")
+    communiction_socket.send(f"Got your message! Thank you!".encode('utf-8'))
