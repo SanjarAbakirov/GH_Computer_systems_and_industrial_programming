@@ -19,3 +19,5 @@ while True:
         'utf-8')  # expecto receive message from the client
     print(f"Message from clent is: {message}")
     communiction_socket.send(f"Got your message! Thank you!".encode('utf-8'))
+    communiction_socket.close()
+    print(f"Connection with {address} ended!")
