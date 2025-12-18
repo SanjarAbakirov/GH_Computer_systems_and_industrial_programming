@@ -13,3 +13,4 @@ server.bind((HOST, PORT))
 server.listen(5)
 
 while True:
+    communiction_socket, address = server.accept()
