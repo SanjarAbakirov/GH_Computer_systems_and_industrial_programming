@@ -3,7 +3,7 @@ import socket
 # host = socket.gethostbyname(socket.gethostname()) #dynamicly - if using virtual box - will be not good
 HOST = '192.168.31.127'
 HOST = '127.0.01'  # for local host
-HOST = 'Localhost'
+HOST = 'Localhost'  # for local host
 PORT = 9090
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
