@@ -45,3 +45,14 @@ sorted_arr = merge_sort(arr)
 print(f"Отсортированный массив: {sorted_arr}")
 print(
     f"Исходный размер: {len(arr)}, операций ~ {len(arr) * (len(arr).bit_length())}")
+
+
+# O(1) constant time
+
+def get_first(data):
+    # Accessing an element by index is O(1)
+    return data[0]
+
+
+items = [1, 2, 3, 4, 5]
+print(get_first(items))  # Always takes the same time
